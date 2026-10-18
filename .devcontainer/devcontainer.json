@@ -1,0 +1,11 @@
+{
+  "name": "MGT 3745 HW6",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ritwickdey.LiveServer", "GitHub.copilot", "bierner.markdown-mermaid"]
+    }
+  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y xdg-utils unzip",
+  "forwardPorts": [5500, 8787]
+}

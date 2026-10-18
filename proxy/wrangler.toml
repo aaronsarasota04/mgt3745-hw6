@@ -1,0 +1,7 @@
+name = "hw6-proxy-<your-github-username>"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+# Use the model Module 7 names. Free-tier keys reach Flash models only.
+GEMINI_MODEL = "<model name from Module 7>"

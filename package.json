@@ -1,0 +1,8 @@
+{
+  "name": "mgt3745-hw6",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test \"evals/*.test.js\""
+  }
+}
