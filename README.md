@@ -7,9 +7,18 @@
 **Team repository:** https://github.com/aaronsarasota04/mgt3745-team-gamma
 **Spec provenance:** copied from commit `5abbc1c5509800ce9898e9935eafdf94cf694cc0` on 2026-10-08
 
-**Feature:** <ID and name from your team's FEATURES.md>
+**Feature:** F1: Show the skills a student is missing for a target role
 
-<Paste the feature's EARS rows here, unchanged. At least three rows, including at least one IF row.>
+- 1. THE SYSTEM SHALL let a student enter the skills they already have and choose one target role from the roles in the posting set. (PROBE-001 #3)
+- 2. WHEN a student submits skills and a target role, THE SYSTEM SHALL list the skills that appear in postings for that role and are missing from the student's list.
+- 3. THE SYSTEM SHALL match skills without regard to capitalization or extra spaces.
+- 4. THE SYSTEM SHALL show the date the posting set was collected next to every result, so a student does not read a frozen snapshot as current.
+- 5. IF the student enters no skills, THEN THE SYSTEM SHALL ask for at least one skill and SHALL NOT show a result.
+- 6. IF the target role has no postings in the data set, THEN THE SYSTEM SHALL say so, naming the role, and SHALL NOT show a gap.
+- 7. IF the student already has every skill in the postings for the role, THEN THE SYSTEM SHALL say no gap was found instead of showing an empty list.
+- 8. THE SYSTEM SHALL read postings only through the team's own API, and SHALL NOT hold a database key in browser code. (PROBE-001 #1)
+- 9. IF a request from the browser tries to add, change, or delete a posting, THEN THE SYSTEM SHALL refuse it. (PROBE-001 #4)
+- 10. THE SYSTEM SHALL show only postings and a collection date that the team supplied, and SHALL NOT generate either. (PROBE-001 #2)
 
 ## See It Work
 

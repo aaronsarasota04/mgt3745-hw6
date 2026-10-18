@@ -2,23 +2,21 @@
 
 ## Prediction Stake
 
-Committed before either builder was opened. Do not edit these predictions after the commit; resolve them beneath.
-
 ### Tight (a count)
 
-<Example form: "bolt.new will satisfy N of my M EARS rows; AI Studio will satisfy N of M.">
+bolt.new will satisfy 8 out of 10 EARS rows. AI Studio will also satisfy 8 out of 10 EARS rows
 
 **Resolution (YYYY-MM-DD):** <the actual counts>
 
 ### Loose (a direction with a reason)
 
-<Your prediction and the reason for it.>
+Both builders will handle the most common case (skills entered for both student and target role)  better than the edge cases, because the spec has several IF rows requiring distinct empty, validation, and fallback states the builds may miss.
 
 **Resolution (YYYY-MM-DD):** <what happened>
 
 ### Open (a question the builds can answer)
 
-<Your question.>
+Will either builder handle matching skills without regard to capitalization or extra spaces?
 
 **Resolution (YYYY-MM-DD):** <the answer, with evidence>
 
