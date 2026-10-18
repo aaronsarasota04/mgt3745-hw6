@@ -4,7 +4,7 @@ The exact text both builders received, unchanged between them.
 
 ---
 
-Build a single-page web app that implements F1, the skill-gap feature below, in the supplied project. Inspect and follow the project's existing structure and API contract. Use only supplied postings and their collection date; do not invent data, dates, API endpoints, or credentials. If the project does not include the required API or posting data, make that limitation clear in the interface rather than showing fabricated results. Implement F1 only; do not add ranking, role suggestions, accounts, or outreach tracking.
+Build a single-page web app that implements the feature below.
 
 ## F1. Skill Gap for a Target Role (J-Devon)
 
