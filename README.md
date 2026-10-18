@@ -4,8 +4,8 @@
 
 ## Feature
 
-**Team repository:** <URL of your team repository>
-**Spec provenance:** copied from commit `<full commit hash>` on <YYYY-MM-DD>
+**Team repository:** https://github.com/aaronsarasota04/mgt3745-team-gamma
+**Spec provenance:** copied from commit `5abbc1c5509800ce9898e9935eafdf94cf694cc0` on 2026-10-08
 
 **Feature:** <ID and name from your team's FEATURES.md>
 
