@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Gap for a Target Role</title>
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+  <body>
+    <main class="page" id="app">
+      <header class="page__header">
+        <h1 class="page__title">Skill Gap for a Target Role</h1>
+        <p class="page__subtitle">
+          Enter the skills you already have, pick a role from the posting set,
+          and see which listed skills you are still missing.
+        </p>
+      </header>
+
+      <form id="gap-form" class="form" novalidate>
+        <div class="field">
+          <label for="skills-input" class="field__label">Your skills</label>
+          <p class="field__hint">Separate skills with commas (for example: Python, SQL, Git).</p>
+          <textarea
+            id="skills-input"
+            name="skills"
+            class="field__input field__input--textarea"
+            rows="3"
+            placeholder="Python, SQL, Git"
+            autocomplete="off"
+          ></textarea>
+          <p id="skills-error" class="field__error" role="alert" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="role-select" class="field__label">Target role</label>
+          <p class="field__hint">Choose one role from the team-supplied posting set.</p>
+          <select id="role-select" name="role" class="field__input">
+            <option value="" selected>Loading roles…</option>
+          </select>
+          <p id="role-error" class="field__error" role="alert" aria-live="polite"></p>
+        </div>
+
+        <button type="submit" class="button button--primary" id="submit-button">
+          Show my skill gap
+        </button>
+      </form>
+
+      <section id="result" class="result" aria-live="polite" aria-atomic="true"></section>
+
+      <p class="status" id="page-status" role="alert" aria-live="polite"></p>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

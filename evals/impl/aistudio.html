@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Gap Analyzer</title>
+    <meta name="description" content="Assess your fit for entry-level tech roles against real employer job postings and identify missing skills." />
+    <meta property="og:title" content="Skill Gap Analyzer" />
+    <meta property="og:description" content="Assess your fit for entry-level tech roles against real employer job postings and identify missing skills." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-container">
+        <h1 class="header-title">Skill Gap Analyzer</h1>
+        <p class="header-subtitle">
+          Designed for graduating seniors applying for entry-level tech roles. Assess your fit against real job requirements without treating job descriptions as rigid barriers.
+        </p>
+        <div class="header-dataset-meta">
+          <span class="meta-label">Posting Dataset Status:</span>
+          <span id="header-collection-badge" class="meta-badge">Fetching posting snapshot...</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="content-grid">
+        <!-- Form Section -->
+        <section class="card-panel" aria-labelledby="form-heading">
+          <h2 id="form-heading">Compare Your Skills to Target Role Postings</h2>
+          <form id="skill-gap-form" novalidate>
+            <!-- Field 1: Target Role -->
+            <div class="form-group">
+              <label for="target-role-select" class="form-label">
+                Target Role <span class="label-required" aria-hidden="true">*</span>
+              </label>
+              <select id="target-role-select" name="targetRole" class="form-select" required aria-describedby="role-helper-text role-validation-message">
+                <option value="">Select a target role...</option>
+              </select>
+              <p id="role-helper-text" class="helper-text">
+                Select an entry-level tech role to compare against requirements extracted from employer job postings.
+              </p>
+              <div id="role-validation-message" class="validation-message" role="alert" aria-live="polite"></div>
+            </div>
+
+            <!-- Field 2: Skills Input -->
+            <div class="form-group">
+              <label for="student-skills-input" class="form-label">
+                Skills You Already Have <span class="label-required" aria-hidden="true">*</span>
+              </label>
+              <textarea
+                id="student-skills-input"
+                name="studentSkills"
+                class="form-textarea"
+                rows="4"
+                placeholder="e.g. Python, Git, SQL, Problem Solving"
+                aria-describedby="skills-helper-text skills-validation-message"
+              ></textarea>
+              <p id="skills-helper-text" class="helper-text">
+                Enter your skills separated by commas or newlines. Casing and extra spaces are ignored during matching.
+              </p>
+              <div id="skills-validation-message" class="validation-message" role="alert" aria-live="polite"></div>
+
+              <!-- Preset chips for fast testing / entry -->
+              <div class="preset-skills-container">
+                <span class="preset-skills-label">Quick add common entry-level skills:</span>
+                <div class="preset-chips-list" id="preset-chips-list">
+                  <button type="button" class="chip-button" data-skill="Python">+ Python</button>
+                  <button type="button" class="chip-button" data-skill="Git">+ Git</button>
+                  <button type="button" class="chip-button" data-skill="SQL">+ SQL</button>
+                  <button type="button" class="chip-button" data-skill="JavaScript">+ JavaScript</button>
+                  <button type="button" class="chip-button" data-skill="React">+ React</button>
+                  <button type="button" class="chip-button" data-skill="HTML">+ HTML</button>
+                  <button type="button" class="chip-button" data-skill="CSS">+ CSS</button>
+                  <button type="button" class="chip-button" data-skill="Java">+ Java</button>
+                  <button type="button" class="chip-button" data-skill="REST APIs">+ REST APIs</button>
+                  <button type="button" class="chip-button" data-skill="Unit Testing">+ Unit Testing</button>
+                  <button type="button" class="chip-button" data-skill="Problem Solving">+ Problem Solving</button>
+                  <button type="button" class="chip-button" data-skill="Excel">+ Excel</button>
+                  <button type="button" class="chip-button" data-skill="Tableau">+ Tableau</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="form-actions">
+              <button type="submit" id="analyze-gap-button" class="btn-primary">
+                Analyze Skill Gap
+              </button>
+              <button type="button" id="reset-form-button" class="btn-secondary">
+                Clear Inputs
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results-section" class="card-panel-elevated" aria-labelledby="results-heading" aria-live="polite">
+          <div class="results-header-bar">
+            <h2 id="results-heading">Skill Gap Analysis Results</h2>
+            <div id="result-collection-date-badge" class="result-collection-date-notice">
+              <span>Posting Set Collected:</span>
+              <span id="result-collection-date-value" class="date-value-highlight">Pending...</span>
+            </div>
+          </div>
+          <div id="results-body">
+            <div class="state-empty-placeholder">
+              Enter your skills above and choose a target role to view the required skills missing from your background.
+            </div>
+          </div>
+        </section>
+
+        <!-- Security & Architecture Integrity Audit Panel -->
+        <section class="security-audit-panel" aria-labelledby="audit-heading">
+          <div class="security-panel-header">
+            <h3 id="audit-heading" class="security-panel-title">System & Security Integrity Standards (F1-8 &amp; F1-9)</h3>
+            <button type="button" id="test-mutation-refusal-btn" class="btn-accent">
+              Verify Mutation Refusal (Test F1-9)
+            </button>
+          </div>
+          <ul class="security-rule-list">
+            <li class="security-rule-item">
+              <span class="security-rule-bullet">&#10003;</span>
+              <span><strong>F1-8:</strong> Browser code holds no database keys or credentials; all postings are read exclusively through <code>GET /api/postings</code>.</span>
+            </li>
+            <li class="security-rule-item">
+              <span class="security-rule-bullet">&#10003;</span>
+              <span><strong>F1-9:</strong> Any attempt to add, change, or delete a posting is strictly refused by the backend API with HTTP 405 Method Not Allowed.</span>
+            </li>
+            <li class="security-rule-item">
+              <span class="security-rule-bullet">&#10003;</span>
+              <span><strong>F1-10:</strong> Postings and collection dates are authentic team-supplied snapshots, never AI-generated or synthetic.</span>
+            </li>
+          </ul>
+          <div id="mutation-test-output" class="mutation-test-console" aria-live="polite" hidden></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <div class="footer-container">
+        <p>Skill Gap Analyzer &bull; Built with standard HTML, CSS, and JavaScript &bull; Team Dataset API</p>
+      </div>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
