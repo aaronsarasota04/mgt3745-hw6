@@ -52,7 +52,7 @@ Every place where both builders guessed, or guessed differently.
 | Cost | 3 | Free tiers exist for both AI Studio and bolt.new |
 | Webpage design  | 3 | To ensure more users will like the UI. |
 | Maintainability  | 4 | To ensure the team will be able to build on top of this |
-| Time needed to manually fix AI output to match spec | 4 |
+| Time needed to manually fix AI output to match spec(larger score means less time) | 4 |
 
 ### Scores (commit after the weights)
 
