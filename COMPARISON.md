@@ -26,7 +26,7 @@ Pass, Partial, or Fail, each with one line of evidence (a screenshot, a file and
 
 ## Judgment Eval
 
-Agreement rate with the second grader: <N of M items, %>. Details in [JUDGMENT.md](JUDGMENT.md).
+Agreement rate with the second grader: 5 of 5 items, 100%>. Details in [JUDGMENT.md](JUDGMENT.md).
 
 ## Findings
 
