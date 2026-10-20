@@ -58,12 +58,15 @@ Every place where both builders guessed, or guessed differently.
 
 | Criterion | Weight | bolt.new | AI Studio |
 |---|---|---|---|
-| <criterion> | <weight> | <1 to 5> | <1 to 5> |
-| **Weighted total** | | <total> | <total> |
+| Cost | 3 | 3 | 3 |
+| Webpage design | 3 | 1 | 4 |
+| Maintainability | 4 | 3 | 4 |
+| Time needed to manually fix AI output to match spec | 4 | 2 | 4 |
+| **Weighted total (out of 100)** | | **45.7** | **75.7** |
 
 ### Decision
 
-<Which builder your team should use for this feature in Phase 2, why, and at least one thing that gets harder with that choice. Tie the reasoning to your team's ADR-001 stack.>
+Choose AI Studio for Phase 2. It scored higher overall (75.7/100 versus Bolt.new’s 45.7), particularly for webpage design and the time needed to manually correct the output. Use it as a starting point for the front end, then integrate the result with ADR-001’s chosen stack: a static HTML/CSS/JavaScript page served with the Cloudflare Worker and D1 database. One tradeoff is scope control: AI Studio added features the requirements did not ask for, so the team will need to remove or adjust those additions to keep the implementation within scope. Its generated output still needs review to ensure it fits the team’s architecture.
 
 ## Handoff to the Team
 
