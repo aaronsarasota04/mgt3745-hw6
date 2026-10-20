@@ -30,7 +30,7 @@ Agreement rate with the second grader: 5 of 5 items, 100%>. Details in [JUDGMENT
 
 ## Findings
 
-<Start with your top error-log row. What happened, which builder, and what it tells you.>
+The top error-log row is Bolt.new's visual rendering failure: although `bolt.css` defines the required colors, the app screenshot showed unstyled default browser components on a dark background. The repository's EARS tests passed, so this points to a CSS asset-linking or preview/runtime issue rather than a requirements-logic failure. For this build, Bolt.new was not reliable for front-end delivery; it may still be useful for back-end work, but that should be evaluated separately.
 
 ## Spec Gaps
 
@@ -38,7 +38,10 @@ Every place where both builders guessed, or guessed differently.
 
 | Gap | What each builder assumed | EARS change or exclusion that closes it |
 |---|---|---|
-| <gap> | <assumptions> | <proposed row> |
+| Posting dataset status | AI Studio added a header status that shows loading, the snapshot's collection date, or a load failure. | Add F1-11: show loading while the dataset loads, its supplied collection date on success, and an unavailable status on failure. |
+| Quick-add common skills | AI Studio added preset skill chips that append to the student's input and avoid adding a skill already present. | Add F1-12: provide common entry-level skills as addable presets without replacing existing input or duplicating an existing skill. |
+| Clear inputs | AI Studio added a control that resets the selected role, entered skills, validation feedback, and displayed results. | Add F1-13: when the student chooses Clear Inputs, clear those inputs and UI states. |
+| System and security integrity panel | AI Studio added a visible standards panel and a mutation-refusal test control, although the EARS specify security behavior rather than an explanatory panel or in-app test. | Exclude the panel and test control. Existing F1-8, F1-9, and F1-10 remain the requirements for system and data integrity. |
 
 ## Recommendation
 
@@ -46,7 +49,10 @@ Every place where both builders guessed, or guessed differently.
 
 | Criterion | Weight (1 to 5) | Why |
 |---|---|---|
-| <criterion> | <weight> | <reason> |
+| Cost | 3 | Free tiers exist for both AI Studio and bolt.new |
+| Webpage design  | 3 | To ensure more users will like the UI. |
+| Maintainability  | 4 | To ensure the team will be able to build on top of this |
+| Time needed to manually fix AI output to match spec | 4 |
 
 ### Scores (commit after the weights)
 
