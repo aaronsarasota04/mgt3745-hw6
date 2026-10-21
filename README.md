@@ -25,20 +25,16 @@
 | bolt.new | AI Studio |
 |---|---|
 | ![bolt build](docs/img/bolt.png) | ![AI Studio build](docs/img/aistudio.png) |
-
-<Replace the two images above with your own screenshots, or one side-by-side GIF.>
-
 ## Status
 
-<One or two sentences: how many EARS rows each builder satisfied, and your recommendation in one line.>
+Both bolt.new and AI Studio passed all 10 EARS rows in the automated evals. Recommend AI Studio: it scored higher overall (75.7/100 vs. 45.7), while Bolt.new’s screenshot showed an unstyled rendering issue.
 
 ## How to Run the Evals
-
+From the repository root, run:
 ```bash
 npm test
 ```
-
-<Say what the test checks and what output to expect.>
+This runs the shared behavioral tests against both builds in evals/impl—20 tests total, covering 10 EARS rows per build. Expect 20 passing tests and 0 failures. These tests don’t assess visual rendering; see JUDGMENT.md for the visual evaluation.
 
 ## Links
 
@@ -53,7 +49,7 @@ npm test
 
 ## Hours
 
-<Total hours spent, with a one-line breakdown.>
+5
 
 ## AI Use
 
