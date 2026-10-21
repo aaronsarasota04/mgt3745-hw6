@@ -52,5 +52,7 @@ This runs the shared behavioral tests against both builds in evals/impl—20 tes
 5
 
 ## AI Use
-
-<Every tool that wrote more than a line or two, each with a link to its DDR.>
+- [docs/DDR-001.md](docs/DDR-001.md) : bolt.new
+- [docs/DDR-002.md](docs/DDR-002.md) : AI studio
+- [docs/DDR-003.md](docs/DDR-003.md): shared.test.js
+- [docs/DDR-004.md](docs/DDR-004.md): Polishing the writing for the context files.

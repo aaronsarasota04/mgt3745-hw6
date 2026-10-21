@@ -70,4 +70,4 @@ Choose AI Studio for Phase 2. It scored higher overall (75.7/100 versus Bolt.new
 
 ## Handoff to the Team
 
-Pull request or issue proposing a FEATURES.md change: <URL>
+Pull request or issue proposing a FEATURES.md change: https://github.com/aaronsarasota04/mgt3745-team-gamma/pull/21
