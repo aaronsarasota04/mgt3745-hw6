@@ -38,9 +38,9 @@ Every place where both builders guessed, or guessed differently.
 
 | Gap | What each builder assumed | EARS change or exclusion that closes it |
 |---|---|---|
-| Posting dataset status | AI Studio added a header status that shows loading, the snapshot's collection date, or a load failure. | Add F1-11: show loading while the dataset loads, its supplied collection date on success, and an unavailable status on failure. |
-| Quick-add common skills | AI Studio added preset skill chips that append to the student's input and avoid adding a skill already present. | Add F1-12: provide common entry-level skills as addable presets without replacing existing input or duplicating an existing skill. |
-| Clear inputs | AI Studio added a control that resets the selected role, entered skills, validation feedback, and displayed results. | Add F1-13: when the student chooses Clear Inputs, clear those inputs and UI states. |
+| Posting dataset status | AI Studio added a header status that shows loading, the snapshot's collection date, or a load failure. | Add F7-1: show loading while the dataset loads, its supplied collection date on success, and an unavailable status on failure. |
+| Quick-add common skills | AI Studio added preset skill chips that append to the student's input and avoid adding a skill already present. | Add F7-2: provide common entry-level skills as addable presets without replacing existing input or duplicating an existing skill. |
+| Clear inputs | AI Studio added a control that resets the selected role, entered skills, validation feedback, and displayed results. | Add F7-3: when the student chooses Clear Inputs, clear those inputs and UI states. |
 | System and security integrity panel | AI Studio added a visible standards panel and a mutation-refusal test control, although the EARS specify security behavior rather than an explanatory panel or in-app test. | Exclude the panel and test control. Existing F1-8, F1-9, and F1-10 remain the requirements for system and data integrity. |
 
 ## Recommendation
@@ -71,3 +71,5 @@ Choose AI Studio for Phase 2. It scored higher overall (75.7/100 versus Bolt.new
 ## Handoff to the Team
 
 Pull request or issue proposing a FEATURES.md change: https://github.com/aaronsarasota04/mgt3745-team-gamma/pull/21
+
+Proposed follow-up: F7, Improve the skill-gap workflow, is a Performance feature. I am creating an issue in the team repository to propose it as a future improvement; it does not change the shipped F1 Must-be feature or make the F1 release depend on F7.
