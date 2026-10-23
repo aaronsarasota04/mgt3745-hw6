@@ -44,7 +44,8 @@ This runs the shared behavioral tests against both builds in evals/impl—20 tes
 - [prompts/PROMPT.md](prompts/PROMPT.md): the exact input both builders received
 - [builds/](builds/): bolt.zip and aistudio.zip
 - [docs/DDR-001.md](docs/DDR-001.md) (bolt.new), [docs/DDR-002.md](docs/DDR-002.md) (AI Studio)
-- Team pull request or issue: <URL>
+- Team pull request: https://github.com/aaronsarasota04/mgt3745-team-gamma/pull/21
+- Team issue: https://github.com/aaronsarasota04/mgt3745-team-gamma/issues/29
 - Deployed Worker (only if you completed the proxy step): <URL>
 
 ## Hours

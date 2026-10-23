@@ -11,7 +11,7 @@ bolt.new will satisfy 8 out of 10 EARS rows. AI Studio will also satisfy 8 out o
 
 Both builders will handle the most common case (skills entered for both student and target role)  better than the edge cases, because the spec has several IF rows requiring distinct empty, validation, and fallback states the builds may miss.
 
-**Resolution (2026-10-20):** True in the specific sense that the common case was not the only thing the builders handled; both passed all EARS rows, including the empty, validation, and fallback cases in F1-5 through F1-9. The issue was not with logic but with one environment-specific Bolt.new rendering defect, not with the underlying rules or test coverage.
+**Resolution (2026-10-20):** False. Both builders passed all evaluated EARS cases, including the common case and the edge cases in F1-5 through F1-9. The results do not support the prediction that they would handle the common case better than the edge cases.
 
 ### Open (a question the builds can answer)
 
