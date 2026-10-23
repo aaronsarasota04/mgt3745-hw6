@@ -5,7 +5,7 @@
 ## Feature
 
 **Team repository:** https://github.com/aaronsarasota04/mgt3745-team-gamma
-**Spec provenance:** copied from commit `5abbc1c5509800ce9898e9935eafdf94cf694cc0` on 2026-10-08
+**Spec provenance:** copied from commit `5abbc1c5509800ce9898e9935eafdf94cf694cc0` on 2026-10-18
 
 **Feature:** F1: Show the skills a student is missing for a target role
 

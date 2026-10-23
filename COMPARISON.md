@@ -70,6 +70,7 @@ Choose AI Studio for Phase 2. It scored higher overall (75.7/100 versus Bolt.new
 
 ## Handoff to the Team
 
-Pull request or issue proposing a FEATURES.md change: https://github.com/aaronsarasota04/mgt3745-team-gamma/pull/21
+Pull request or issue proposing a FEATURES.md change:PR- https://github.com/aaronsarasota04/mgt3745-team-gamma/pull/21
+Issue- https://github.com/aaronsarasota04/mgt3745-team-gamma/issues/29
 
 Proposed follow-up: F7, Improve the skill-gap workflow, is a Performance feature. I am creating an issue in the team repository to propose it as a future improvement; it does not change the shipped F1 Must-be feature or make the F1 release depend on F7.
